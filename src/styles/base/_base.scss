@@ -1,0 +1,36 @@
+html, body {
+  font-family: var(--font-poppins);
+  height: 100%;
+  width: 100%;
+  
+}
+
+// h1 {
+//   font-size: 3.2em;
+//   line-height: 1.1;
+// }
+.swal2-confirm.swal2-styled{
+  background-color: var(--primary-color);
+  min-width: 100px;
+  border: none;
+  &:focus{
+      box-shadow: none;
+  }
+}
+.swal2-icon.swal2-warning.swal2-icon-show{
+  color: var(--orangeSoft-color);
+  border-color: var(--orangeSoft-color);
+  height: 4em;
+  width: 4em;
+}
+.swal2-cancel.swal2-styled{
+  background-color: var(--primary-color);
+  
+}
+
+input:focus-visible{
+  outline-color:var(--primarySoft-color);
+}
+select:focus-visible{
+  outline-color:var(--primarySoft-color);
+}

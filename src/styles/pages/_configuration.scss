@@ -1,0 +1,146 @@
+.container {
+    padding: 20px;
+    background-color: var(--grey-color);
+    border-radius: 8px;
+    padding-left: 8%;
+    min-height: 100vh;
+    padding-top: 10%;
+  
+    h1 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      @media (max-width: 600px) {
+        font-size: 1.1rem;
+      }
+    }
+  
+    .tabs {
+      display: flex;
+      cursor: pointer;
+      margin-bottom: 20px;
+  
+      .tab {
+        padding: 10px 20px;
+        margin-right: 10px;
+        transition: color 0.3s;
+        color: var(--secundaryInactive-color);
+  
+        &.active {
+          border-bottom: 2px solid var(--primary-color-active);
+          color: var(--primary-color);
+        }
+  
+        &.inactive {
+          color: var(--secundaryInactive-color);
+        }
+      }
+    }
+  
+    .subtitle {
+      color: var(--secundary-color);
+      margin-bottom: 2%;
+      font-size: 1.2rem;
+      @media (max-width: 600px) {
+        font-size: 0.8rem;
+      }
+    }
+  
+    .input {
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid var(--primary-color);
+      margin-bottom: 10px;
+      width: 40%;
+      box-sizing: border-box;
+    }
+  
+    .button {
+        margin-left: 2%;
+      padding: 10px 15px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: var(--primary-color-active);
+      }
+    }
+    .list-cont{
+        margin-left: 5%;
+        display: flex;
+    flex-direction: column;
+    max-height: 50vh;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 2%;
+    @media (max-width: 600px) {
+      max-height: 70vh;
+    }
+    }
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+      padding: 5px 0;
+      color: var(--secundary-color);
+      @media (max-width: 600px) {
+        width: 45%;
+      }
+    }
+  
+    // Contenedor de países en dos columnas
+    .countries-container {
+        .countries-columns {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+    
+        .pagination-controls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+    
+          .pagination-button {
+            padding: 8px 12px;
+            margin: 0 5px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+    
+            &:disabled {
+              background-color: var(--secundaryInactive-color);
+              cursor: not-allowed;
+            }
+    
+            &:hover:not(:disabled) {
+              background-color: var(--primary-color-active);
+            }
+          }
+    
+          .pagination-info {
+            margin: 0 10px;
+            color: var(--secundary-color);
+          }
+        }
+      }
+      @media (max-width: 600px) {
+        padding-left: 10%;
+        padding-top: 20%;
+      }
+  }
+  .edit-button{
+    display: flex;
+    align-items: flex-end;
+    & svg{
+       width: 20px;
+    height: 20px; 
+    }
+    
+  }

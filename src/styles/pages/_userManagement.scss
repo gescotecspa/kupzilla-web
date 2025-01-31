@@ -1,0 +1,356 @@
+.user-management {
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    padding-top: 9%;
+    background-image: url(../../assets/images/fondo-poli.svg);
+    @media (max-width: 768px) {
+        width: 95%;
+        height: 100%;
+        padding: 0%;
+        padding-left: 10%;
+        padding-top: 100px;
+        padding-bottom: 5%;
+    }
+
+    & .filters {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        margin-bottom: 15px;
+        align-items: center;
+        @media (max-width: 768px) {
+            justify-content: center;    
+        }
+        
+    }
+
+    & .inputFilter {
+        padding-left: 0.5em;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.1875em;
+        width: 100%; // Ocupa el 100% del ancho en pantallas pequeñas
+        max-width: 220px; // Limita el ancho máximo en pantallas grandes
+        height: 2.5rem;
+        margin-top: 10px;
+        outline: none;
+        color: #333;
+        font-size: 0.9rem;
+        box-sizing: border-box;
+    }
+    & .inputFilterStatus {
+        padding-left: 0.5em;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.1875em;
+        width: 100%; // Ocupa el 100% del ancho en pantallas pequeñas
+        max-width: 150px; // Limita el ancho máximo en pantallas grandes
+        height: 2.5rem;
+        margin-top: 10px;
+        outline: none;
+        color: #333;
+        font-size: 0.9rem;
+        box-sizing: border-box;
+    }
+
+    & .btnFilter {
+        cursor: pointer;
+        width: 100%;
+        max-width: 150px;
+        border: 1.2px solid var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        box-shadow: 1px 3px 2px -4px rgba(0,0,0,0.75);
+        border-radius: 10px;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: var(--greenSoft-color);
+            color: #fff;
+        }
+    }
+
+    & h1 {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #027A8C;
+        margin-bottom: 15px;
+        @media (max-width: 480px) {
+            padding-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 0px;
+            margin-top: 5px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        @media (max-width:500px) {
+            padding-left: 15px;
+        }
+       
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column; // Cambia la dirección para pantallas pequeñas
+            align-items: flex-start;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f1f1f1;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .user-info {
+                display: flex;
+                align-items: center;
+                width: 100%; // Asegura que ocupe todo el ancho disponible
+                margin-bottom: 10px;
+
+                .user-avatar {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 15px;
+                    
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .user-details {
+                    .user-name {
+                        font-size: 1rem;
+                        font-weight: bold;
+                        color: #555;
+                    }
+
+                    .user-email {
+                        font-size: 0.8rem;
+                        color: #777;
+                    }
+                }
+            }
+
+            .user-roles {
+                font-size: 0.8rem;
+                color: #888;
+                width: 100%; // Asegura que ocupe todo el ancho disponible
+            }
+        }
+    }
+}
+
+// Ajustes para los modales
+.swal2-inputDate {
+    width: 60%;
+    height: 2.5em;
+    margin-top: 10px;
+    padding-left: 0.75em;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.1875em;
+    outline: none;
+    font-size: 1rem;
+    color: #888;
+}
+
+.swal2-input {
+    width: 60% !important; 
+    height: 2.5rem !important;
+    padding: 0.75em;
+    margin-top: 10px;
+    @media (max-width:500px) {
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0
+     }
+}
+
+.swal2-popup.swal2-modal.swal2-show {
+    width: 80%;
+    @media (max-width:500px) {
+        width: 90%;
+     }
+}
+
+.status-role {
+    display: flex;
+    flex-wrap: wrap; // Permite que los elementos se ajusten en pantallas pequeñas
+    margin-top: 10px;
+    justify-content: center; // Centra los elementos
+    width: 100%; // Ocupa el 100% del ancho disponible
+
+    & .role {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-around;
+        & .status {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+
+            & label {
+                margin-left: 10px;
+                font-size: 0.9rem;
+                color: #888;
+            }
+        }
+        @media (max-width:500px) {
+           width: 100%;
+           flex-direction: column;
+        }
+    }
+}
+.divbtnreg{
+    @media (max-width: 500px) {
+        width: 100%;
+       display: flex;
+       justify-content: center;
+       flex-direction: column-reverse;
+    }
+}
+.btnRegister {
+    cursor: pointer;
+    width: 100%; // Ocupa el 100% del ancho en pantallas pequeñas
+    max-width: 200px; // Limita el ancho máximo en pantallas grandes
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    color: #ffffff;
+    box-shadow: 0px 4px 2px -4px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    &:hover {
+        background-color: var(--greenSoft-color);
+    }
+    @media (max-width: 768px) {
+        background-color: var(--primary-color);
+        max-width: 200px;
+        width: 60%;
+        align-self: center;
+    }
+}
+
+.swal2-actions {
+    & button {
+        max-width: 150px;
+        margin-top: 0;
+    }
+
+    .swal2-cance {
+        display: flex;
+    }
+}
+.user-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.user-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffffd1;
+}
+
+.user-table th, .user-table td {
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    @media (max-width: 768px) {
+        padding: 7px 10px;
+        font-size: 0.7rem;
+    }
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.user-table tbody tr:hover {
+    background-color: #f1f1f1;
+    // cursor: pointer;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.btnsTable{
+    display: flex;
+    justify-content: space-around;
+}
+  
+    /* Icono de editar */
+    .buttonEd {
+      color: #007A8C;
+      cursor: pointer;
+      padding: 5px;
+      &:hover {
+        color: #0195ac;
+      }
+    }
+  
+    /* Icono de eliminar */
+    .buttonDel {
+      color: rgb(146, 2, 2);
+      cursor: pointer;
+      padding: 5px;
+      &:hover {
+        color: rgb(203, 0, 0);
+      }
+    }
+    .loaderUsers{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        align-items: center;
+        top: 50px;
+        background-color: #33333313;
+        color: var(--primary-color);
+        font-weight: 600;
+
+    }
+
+    .no-results {
+        text-align: center !important;
+        color: #00798c9f;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    .pagCont{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+
+    }

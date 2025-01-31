@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap&family=Fira+Code:wght@300..700&display=swap');
+@font-face {
+    font-family: "Buckwheat TC Sans Regular";
+    src: url('../../assets/fonts/BuckwheatTCSansRegular.ttf');
+    font-weight: normal;
+  }
+
+:root{
+    // fonts
+    --font-poppins: "Poppins", sans-serif;
+    --font-robotoFlex: "Roboto Flex", sans-serif;
+    --font-robotoSerif: "Roboto Serif", serif;
+    --font-firaCode: "Fira Code", monospace;
+    --font-buckwheat: "Buckwheat TC Sans Regular", sans-serif;
+    //colors
+    $primary-color: #F1AD3E;
+    --primary-color: #007a8c;
+    --primarySoft-color: #acd0d5;
+    --secundary-color: #336749;
+    --grey-color: #f6f6f6;
+    --primary-color-active: #00a2b7;
+
+    --greenSoft-color: #008ba1;
+    --blue-light-color: #64C9ED;
+    --secundaryInactive-color: #317bbb82;
+    --black-color: #101010;
+    --tertiary-color: #ECECEC;
+    --red-color: rgb(181, 23, 23);
+    --redSoft-color: rgb(223, 26, 26);
+    --orangeSoft-color: #fcb646;
+    
+    --balloon-border-radius: 5px;
+    --balloon-color: var(--secundary-color);
+    --balloon-text-color: var(--primary-color);
+    --balloon-font-size: 15px;
+    --balloon-move: 30px;
+    // --secundary-color: #084f4d;
+    // --primarysoft-color: #37bcb1;
+    // --accent-color: #f0f0f0;
+    
+}
+// naranja: #F1AD3E
+//         mostaza: #d59831
+//         azul: #3179BB
+//         celeste: #64C9ED
+
+// verde: #007a8c rgb(0, 122, 140)
+// verde claro: #acd0d5 rgb(172, 208, 213)
+// verdeHoja: background: #336749 rgb(51, 103, 73)
+// gris: #f6f6f6 rgb(246, 246, 246)

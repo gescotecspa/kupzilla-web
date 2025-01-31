@@ -1,0 +1,66 @@
+.btnSave.MuiButton-root {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+
+    &:hover {
+        color: #fff;
+        background-color: #01abc1;
+        border: 1px solid #01abc1;
+    }
+    @media (max-width: 600px) {
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 5px 10px;
+      }
+}
+
+.btnCancel.MuiButton-root {
+    color: #af2432;
+    background-color: #ffffff;
+    border: 1px solid #af2432;
+
+    &:hover {
+        color: #fff;
+        background-color: #af2432;
+    }
+    @media (max-width: 600px) {
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 5px 10px;
+        & span{
+            font-size: 0.7em;
+        }
+      }
+}
+
+.btnEdit.MuiButton-root {
+    color: var(--primary-color);
+    border: solid 0.2px var(--primary-color);
+    padding: 5px 15px;
+
+    &:hover {
+        color: #fff;
+        background-color: var(--greenSoft-color);
+    }
+    @media (max-width: 600px) {
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 5px 10px;
+      }
+}
+
+.btnDelete.MuiButton-root {
+    color: #af2432;
+    border: solid 0.2px #af2432;
+    padding: 5px 15px;
+
+    &:hover {
+        color: #fff;
+        background-color: #af2432;
+    }
+    @media (max-width: 600px) {
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 5px 10px;
+      }
+}

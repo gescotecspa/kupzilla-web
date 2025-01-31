@@ -1,0 +1,102 @@
+.dashboardContainer {
+    padding: 3%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(../../assets/images/fondo-poli.svg);
+    background-repeat: repeat;
+    @media (max-width: 768px) {
+        padding-top: 100px;
+       }
+}
+
+// .dashboardTitle {
+//     text-align: center;
+//         font-size: 1.2rem;
+//         color: #027A8C;
+//         margin-bottom: 10px;
+//         @media (max-width: 480px) {
+//             font-size: 1rem;
+//             margin-bottom: 0px;
+//             margin-top: 10px;
+//         }
+// }
+
+.cardsContainer {
+    z-index: 0;
+    width: 70%;
+    padding-left: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10%;
+    @media (max-width: 768px) {
+       width: 95%;
+      }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: var(--primary-color);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        .cardLabel{
+            color: var(--primary-color-active);
+        }
+        .cardIcon{
+            color: var(--primary-color-active);
+        }
+    }
+
+    .cardIcon {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .cardLabel {
+        font-size: 0.8rem;
+        width: 90%;
+        color: #fff;
+    }
+    @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+        & .cardIcon {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        & .cardLabel {
+            font-size: 0.7rem;
+            width: 90%;
+            color: #fff;
+        }
+       }
+}
+.Background{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 0;
+}

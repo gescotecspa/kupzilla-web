@@ -1,0 +1,195 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--grey-color);
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-image: url(../../assets/images/fondo-poli.svg);
+  padding-top: 10%;
+  @media (max-width: 500px) {
+    padding: 0;
+    height: 100%;
+  }
+  .content-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    .registration-section {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: var(--primary-color);
+      min-height: 100%;
+      color: white;
+      border-radius: 12px 0px 0px 12px;
+      text-align: center;
+      justify-content: space-between;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+      @media (max-width: 500px) {
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-self: center;
+        justify-content: flex-start;
+        padding-left: 12%;
+        height: 150px;
+      }
+      h3 {
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+
+      .button {
+        padding: 12px 24px;
+        background-color: var(--primarySoft-color);
+        color: var(--primary-color);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          background-color: var(--grey-color);
+          color: var(--primary-color);
+          transform: scale(1.01);
+        }
+        @media (max-width: 500px) {
+          padding: 8px 20px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .video-section {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      video {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 12px 12px 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      @media (max-width: 500px) {
+       margin-left: 0%;
+       
+       width: 100%;
+       & video{
+        border-radius: 0px 0px 0px 0px;
+       }
+      }
+    }
+    @media (max-width: 500px) {
+      margin-top: 60%;
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+  }
+
+  section {
+    width: 90%;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--grey-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      color: var(--secundary-color);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      @media (max-width: 500px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 20px;
+      @media (max-width: 500px) {
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 6%;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+
+      li {
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+      }
+    }
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 95%;
+    }
+  }
+}
+.divLogoHome{
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  width: 20%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+  align-items: flex-end;
+  align-items: center;
+  
+  & .LogoH{
+    height: 50px;
+    margin-bottom: 10px;
+    @media (max-width: 500px) {
+      width:45px;
+      height:45px;
+    }
+  }
+  & .Logo2H{
+    height: 40px;
+    margin-bottom: 20px;
+    @media (max-width: 500px) {
+      width:100px;
+      height:35px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height:100px;
+  }
+
+}

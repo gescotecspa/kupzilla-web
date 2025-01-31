@@ -1,0 +1,83 @@
+/* Estilos generales para la página del QR */
+.qr-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    background-color: #f4f7fb; /* Color de fondo suave */
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .qr-page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif; /* Fuente moderna */
+  }
+  
+  .qr-page-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .qr-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    display: inline-block;
+  }
+  
+  .share-button {
+    border: solid 1px #007A8C;
+    color: white;
+    background-color: #007A8C;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar énfasis */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .share-button:hover {
+    background-color: #0093aa;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .share-button svg {
+    fill: white;
+    width: auto;
+    height: 25px;
+  }
+  
+  /* Estilos adicionales para responsividad */
+  @media (max-width: 768px) {
+    .qr-page-title {
+      font-size: 2rem;
+    }
+  
+    .qr-page-description {
+      font-size: 1rem;
+    }
+  
+    .qr-container {
+      padding: 30px;
+    }
+  
+    .share-button {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  }
+  

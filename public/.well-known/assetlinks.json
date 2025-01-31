@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.camaradeturismocobquecura.CobquecurApp",
+      "sha256_cert_fingerprints":
+        ["84:A2:05:F3:4D:B2:14:B5:0F:D6:80:35:90:62:3C:E8:EF:E0:C5:3A:5D:50:9A:E1:E3:25:D1:44:A4:B4:CB:67"]
+    }
+  }
+]

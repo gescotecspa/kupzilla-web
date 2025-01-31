@@ -1,0 +1,36 @@
+.qr-container-wrapper {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .qr-text {
+    font-size: 20px;
+    color: #007A8C;
+    margin-bottom: 5%;
+  }
+  
+  .qr-container {
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .qr-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007A8C;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 85%;
+    align-self: center;
+    &:hover {
+      background-color: #0093aa;
+    }
+  }
+  

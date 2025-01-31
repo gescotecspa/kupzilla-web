@@ -1,0 +1,225 @@
+.user-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  min-height: 100vh;
+  // background-color: #f9f9f9;
+  background-image: url(../../assets/images/fondo-poli.svg);
+  
+  @media (max-width: 600px) {
+    padding-top: 15%;
+    padding-left: 10%;
+  }
+  // background-repeat: no-repeat;
+  // background-size: cover;
+
+  .profile-card {
+    margin-top: 10%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+
+    .profile-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .contImageP{
+        width: 15%;
+        @media (max-width: 568px) {
+          width: auto;
+        }
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 80%;
+        overflow: hidden;
+        margin-bottom: 20px;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+      .profile-info {
+        width: 60%;
+        text-align: left;
+
+        p {
+          margin: 10px 0;
+          font-size: 16px;
+
+          strong {
+            font-weight: 600;
+          }
+
+          input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+.profile-infoEdit{
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .columnData{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    @media (max-width: 568px) {
+      width: 90%;
+    }
+  } 
+
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+
+    strong {
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+    select{
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+}
+@media (max-width: 568px) {
+  flex-direction: column;
+  align-items: center;
+}
+}
+    .edit-buttons {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 20px;
+      width: 50%;
+      .save-button,
+      .cancel-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .save-button {
+        background-color: var(--primary-color);
+        color: #fff;
+        &:hover{
+          background-color: var(--greenSoft-color);
+        }
+      }
+
+      .cancel-button {
+        background-color: #a6332a;
+        color: #fff;
+        &:hover{
+          background-color: #d03328;
+        }
+      }
+      @media (max-width: 568px) {
+        width: 90%;
+      }
+    }
+
+    .edit-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover{
+        background-color: var(--greenSoft-color);
+      }
+    }
+  }
+}
+.imgInfo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  @media (max-width: 678px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.profile-imageEdit{
+  width: 150px;
+  height: 150px;
+  @media (max-width: 568px) {
+    height: auto;
+  }
+  & label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a5a5a;
+    border-radius: 50%;
+    z-index: 10;
+    // width: 150px;
+    height: 150px;
+    & svg{
+      position: absolute;
+      top:50;
+      background-color: #5a5a5a82;
+    border-radius: 50%;
+    z-index: 10;
+    }
+  }
+
+  & img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  & .file-input{
+    display: none;
+  }
+}
+.divUpdateimg{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+   width: 150px;
+    height: 150px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    &:hover{
+      opacity: 1;
+   background-color: #5a5a5a56;
+    border-radius: 50%;   
+    }
+    
+}
