@@ -45,6 +45,14 @@
           object-fit: cover;
         }
       }
+      .profile-image-edit{
+        height: 150px;
+        img {
+          height: 100%;
+          width: auto;
+          object-fit: cover;
+        }
+      }
     }
 
       .profile-info {
@@ -149,7 +157,7 @@
       }
     }
 
-    .edit-button {
+    .edit-button-profile {
       margin-top: 20px;
       padding: 10px 20px;
       background-color: var(--primary-color);
@@ -199,7 +207,6 @@
   }
 
   & img{
-    width: 100%;
     height: 100%;
     border-radius: 50%;
   }

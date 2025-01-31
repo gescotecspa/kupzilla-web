@@ -8,6 +8,7 @@ import { logOutUser, userLogIn } from '../../redux/actions/userActions';
 import User from '../../models/User';
 import logo from '../../assets/logo.png'
 // import logo2 from '../../assets/logo2.png'
+import noimage from '../../assets/images/noimage.png';
 
 const URL = import.meta.env.VITE_API_URL;
 
@@ -96,7 +97,7 @@ const Navbar: React.FC = () => {
                         </div>
                         {userActive.userData && isUser(userActive.userData) && userActive.userData.image_url ?
                             <img src={`${URL}${userActive.userData.image_url}`} title='Edit' className='imageUser' alt="userImg" /> :
-                            <img src="https://res.cloudinary.com/dbwmesg3e/image/upload/v1721157537/TurismoApp/no-product-image-400x400_1_ypw1vg_sw8ltj.png" title='Edit' className='imageUser' alt="userImg" />
+                            <img src={noimage} title='Edit' className='imageUser' alt="userImg" />
                         }
 
                     </li>

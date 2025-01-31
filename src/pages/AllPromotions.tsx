@@ -10,13 +10,13 @@ import { fetchStatuses } from '../redux/actions/userActions';
 import { fetchCategories } from '../redux/actions/globalDataActions';
 import CreatePromotionModal from '../components/createPromo/CreatePromotionModal';
 import User from '../models/User';
-import { fetchPartnerById } from '../redux/actions/partnerActions';
+// import { fetchPartnerById } from '../redux/actions/partnerActions';
 import Pagination from '../components/Pagination/pagination';
 
 
 const AllPromotions = () => {
     const dispatch = useAppDispatch();
-    const promotions = useAppSelector((state: RootState) => state.promotions.allPromotions.filter(promotion => promotion.status.name !== 'deleted'));
+    const promotions = useAppSelector((state: RootState) => state.promotions.allPromotions);
     const categories = useAppSelector((state: RootState) => state.globalData.categories);
     const partner = useAppSelector((state: RootState) => state.partner.partnerData);
     const [selectedPromotion, setSelectedPromotion] = useState<PromotionUpdateModel | null>(null);
@@ -85,9 +85,9 @@ const AllPromotions = () => {
         dispatch(fetchAllPromotions());
         dispatch(fetchStatuses());
         dispatch(fetchCategories())
-        if(userData){
-        dispatch(fetchPartnerById(userData.user_id))    
-        }
+        // if(userData){
+        // dispatch(fetchPartnerById(userData.user_id))    
+        // }
     }, [dispatch]);
 
     // Filtrar las promociones
@@ -170,11 +170,11 @@ const AllPromotions = () => {
             }
             <h2>Promociones Disponibles</h2>
             <div className="items-per-page">
-                    <label htmlFor="itemsPerPage">Promociones por página:</label>
-                    <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
-                        <option value={10}>10</option>
-                        <option value={20}>20</option>
-                        <option value={40}>40</option>
+                    <label className='itemPerPage' htmlFor="itemsPerPage">Promociones por página:</label>
+                    <select className='itemPerPage' value={itemsPerPage} onChange={handleItemsPerPageChange}>
+                        <option className='itemPerPage' value={10}>10</option>
+                        <option className='itemPerPage' value={20}>20</option>
+                        <option className='itemPerPage' value={40}>40</option>
                     </select>
                 </div>
             {/* Filtros */}

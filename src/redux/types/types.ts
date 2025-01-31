@@ -105,3 +105,10 @@ export enum UserActionTypes {
     ratings: TouristComment | [];
     average_rating: number
   }
+
+  export interface TermsResponse {
+    id: number;
+    version: string;
+    created_at: string;
+    content: string;
+  }

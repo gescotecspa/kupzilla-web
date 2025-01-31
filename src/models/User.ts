@@ -16,7 +16,8 @@ export default interface User {
   status: Status;
   token: string;
   image_url?: string;
-  exp: number
-  roles: Role[]
+  exp: number;
+  roles: Role[];
+  accept_terms?: boolean
 }
 

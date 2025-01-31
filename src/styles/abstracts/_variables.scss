@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap&family=Fira+Code:wght@300..700&display=swap');
 @font-face {
     font-family: "Buckwheat TC Sans Regular";
-    src: url('../../assets/fonts/BuckwheatTCSansRegular.ttf');
+    src: url('/assets/fonts/BuckwheatTCSansRegular.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
   }
 
 :root{
@@ -11,7 +12,7 @@
     --font-robotoFlex: "Roboto Flex", sans-serif;
     --font-robotoSerif: "Roboto Serif", serif;
     --font-firaCode: "Fira Code", monospace;
-    --font-buckwheat: "Buckwheat TC Sans Regular", sans-serif;
+    --font-buckwheat: "BuckwheatTCSansRegular", sans-serif;
     //colors
     $primary-color: #F1AD3E;
     --primary-color: #007a8c;

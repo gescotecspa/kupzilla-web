@@ -101,6 +101,7 @@
 
   .tourist-point-card {
     width: 50%;
+    position: relative;
   }
 }
 
@@ -211,4 +212,37 @@
   @media (max-width: 600px) {
     font-size: 0.8rem;
   }
+}
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px; // Ajusta el tamaño según tu diseño
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; // Oculta la imagen inicialmente
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-image.visible {
+  opacity: 1; // Muestra la imagen cuando está cargada
+}
+
+.card-image.hidden {
+  display: none; // Opcional: oculta completamente la imagen si aún no está cargada
+}
+
+.image-loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; // Asegura que esté encima de la imagen
 }

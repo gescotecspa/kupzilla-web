@@ -8,6 +8,7 @@ import Cookies from 'js-cookie';
 import { AppDispatch, RootState } from "../store/store";
 import { Role } from "../../models/RoleModel";
 import { Status } from "../types/types";
+import apiClient from "../../api/axiosConfig";
 
 interface CustomJwtPayload extends JwtPayload {
   public_id: string;
@@ -33,8 +34,6 @@ const URL = import.meta.env.VITE_API_URL;
 const userLogIn = (user: UserLogin | null, token: string) => {
   return async (dispatch: Dispatch) => {
     try {
-      
-      
       if (!user && token.length) {
         // console.log("se envia token_____ user log",token);
         const response = await axios.get(`${URL}/user`, {
@@ -173,7 +172,7 @@ const createUser = (userData: CreateUserModel) => {
 const createPartnerUser = (userData: CreateUserModel) => {
   return async () => {
     try {
-      const response = await axios.post(`${URL}/signup-partner`, userData);
+      const response = await apiClient.post(`${URL}/signup-partner`, userData);
       return response.data;
     } catch (error: any) {
       // Verificar si existe error.response y error.response.data.message
@@ -192,7 +191,7 @@ const fetchAllUsers = () => async (dispatch: Dispatch, getState: () => RootState
   try {
       const response = await axios.get<User[]>(`${URL}/users`, {
           headers: {
-              Authorization: `Bearer ${accessToken}` // Agregar el token en el header
+              Authorization: `Bearer ${accessToken}`
           }
       });
       // console.log("respuesta en la action",response);
@@ -204,7 +203,7 @@ const fetchAllUsers = () => async (dispatch: Dispatch, getState: () => RootState
   }
 };
 const fetchRoles = () => async (dispatch: Dispatch, getState: () => RootState) => {
-  const { accessToken } = getState().user; // Obtener el token del estado global
+  const { accessToken } = getState().user; 
 
   try {
     const response = await axios.get<Role[]>(`${URL}/roles`, {
@@ -272,8 +271,8 @@ const assignRoleToUser = (data: { role_ids: number[]; user_id: number; }) => {
 const fetchTouristCommentsLastWeek = () => {
   return async (dispatch: AppDispatch) => {
     try {
-      const response = await axios.get(`${URL}/tourists/ratings/last-4-weeks`);
-      console.log("respuesta de peticion puntos turisticos", response);
+      const response = await apiClient.get(`${URL}/tourists/ratings/last-4-weeks`);
+      // console.log("respuesta de peticion puntos turisticos", response);
       
       dispatch(setCommentsTouristLastWeek(response.data));
     } catch (error) {
@@ -285,7 +284,7 @@ const fetchTouristCommentsLastWeek = () => {
 const fetchTouristCommentsById = (TouristId: number) => {
   return async (dispatch: AppDispatch) => {
     try {
-      const response = await axios.get(`${URL}/tourists/${TouristId}/ratings/all`);
+      const response = await apiClient.get(`${URL}/tourists/${TouristId}/ratings/all`);
       dispatch(setCommentsTourist(response.data));
     } catch (error) {
       console.error("Error al cargar los comentarios del punto turístico", error);

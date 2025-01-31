@@ -38,7 +38,7 @@ const HomePage = () => {
             Si eres turista, <strong>¡regístrate aquí!</strong> para comenzar a aprovechar nuestras promociones y
             disfrutar de todas las maravillas que nuestra comuna tiene para ofrecer.
           </p>
-          <button className="button" onClick={handleTouristRegistration}>
+          <button className="buttonRegisterTourist" onClick={handleTouristRegistration}>
             Registrarse como Turista
           </button>
         </div>

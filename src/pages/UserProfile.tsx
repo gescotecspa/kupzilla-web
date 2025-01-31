@@ -7,6 +7,7 @@ import { fetchCountries } from '../redux/actions/globalDataActions';
 import { updateUser } from '../redux/actions/userActions';
 import Swal from 'sweetalert2';
 import { compressAndConvertToBase64 } from '../utils/imageUtils';
+import noimage from '../assets/images/noimage.png';
 
 const URL = import.meta.env.VITE_API_URL;
 
@@ -17,7 +18,7 @@ const UserProfile = () => {
   //  console.log(user);
    const dispatch = useAppDispatch();
   const [isEditing, setIsEditing] = useState(false);
-  const [imagePreview, setImagePreview] = useState(`${URL}${user.image_url}`|| '');
+  const [imagePreview, setImagePreview] = useState(user.image_url?`${URL}${user.image_url}`: noimage);
   const [formData, setFormData] = useState({
     first_name: user.first_name,
     last_name: user.last_name,
@@ -120,7 +121,7 @@ if (response?.status == 200) {
                      <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24"><g fill="none" stroke="white" strokeLinecap="round" strokeWidth="1.5"><path strokeLinejoin="round" d="M21.25 13V8.5a5 5 0 0 0-5-5h-8.5a5 5 0 0 0-5 5v7a5 5 0 0 0 5 5h6.26"/><path strokeLinejoin="round" d="m3.01 17l2.74-3.2a2.2 2.2 0 0 1 2.77-.27a2.2 2.2 0 0 0 2.77-.27l2.33-2.33a4 4 0 0 1 5.16-.43l2.47 1.91M8.01 10.17a1.66 1.66 0 1 0-.02-3.32a1.66 1.66 0 0 0 .02 3.32"/><path strokeMiterlimit="10" d="M18.707 15v5"/><path strokeLinejoin="round" d="m21 17.105l-1.967-1.967a.458.458 0 0 0-.652 0l-1.967 1.967"/></g>
                      </svg>
                   </div>   
-              <img src={imagePreview} alt="User" />
+              <img src={imagePreview || noimage} alt="User" className='profile-image-edit'/>
           </label>
               <input
                 type="file"
@@ -215,7 +216,7 @@ if (response?.status == 200) {
             <div className='contImageP'>
             <div className="profile-image">
               <img
-                src={imagePreview || "https://res.cloudinary.com/dbwmesg3e/image/upload/v1721157537/TurismoApp/no-product-image-400x400_1_ypw1vg_sw8ltj.png"}
+                src={imagePreview || noimage}
                 alt="User"
               />
             </div>
@@ -235,7 +236,7 @@ if (response?.status == 200) {
               {/* </div> */}
             </div>
             </div>
-            <button className="edit-button" onClick={handleEdit}>Editar Perfil</button>
+            <button className="edit-button-profile" onClick={handleEdit}>Editar Perfil</button>
           </div>
         )}
       </div>

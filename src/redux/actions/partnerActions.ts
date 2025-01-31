@@ -1,8 +1,9 @@
 import { Dispatch } from "@reduxjs/toolkit";
-import axios from "axios";
+// import axios from "axios";
 import { setPartnerData} from "../reducers/partnerReducer";
 
 import { PartnerCreate } from "../../models/PartnerModels";
+import apiClient from "../../api/axiosConfig";
 
 const URL = import.meta.env.VITE_API_URL;
 
@@ -10,7 +11,7 @@ const URL = import.meta.env.VITE_API_URL;
 const createPartner = (partnerData:PartnerCreate) => {
   return async () => {
     try {
-      const response = await axios.post(`${URL}/partners`, partnerData);
+      const response = await apiClient.post(`${URL}/partners`, partnerData);
       // dispatch(setPartnerData(response.data));
       return response.data;
     } catch (error) {
@@ -24,8 +25,8 @@ const createPartner = (partnerData:PartnerCreate) => {
 const fetchPartnerById = (partnerId: number) => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await axios.get(`${URL}/partners/${partnerId}`);
-      // console.log("respuesta en acition", response);
+      const response = await apiClient.get(`${URL}/partners/${partnerId}`);
+      console.log("respuesta en acition", response);
       
       dispatch(setPartnerData(response.data));
       return response
@@ -40,7 +41,7 @@ const updatePartner = (partnerId: number, data: any) => {
   return async (dispatch: Dispatch) => {
     try {
       // Incluye `data` en la solicitud `PUT`
-      const response = await axios.put(`${URL}/partners/${partnerId}`, data);
+      const response = await apiClient.put(`${URL}/partners/${partnerId}`, data);
       // console.log("respuesta partner",response);
       
       dispatch(setPartnerData(response.data));
@@ -55,7 +56,7 @@ const updatePartner = (partnerId: number, data: any) => {
 const fetchBranchesByPartner = (partnerId: number) => {
   return async () => {
     try {
-      const response = await axios.get(`${URL}/partners/${partnerId}/branches`); // Asumiendo que esta es la ruta correcta
+      const response = await apiClient.get(`${URL}/partners/${partnerId}/branches`); // Asumiendo que esta es la ruta correcta
       // console.log("Sucursales del socio", response.data);
       return response.data; // Retorna las sucursales si es necesario en el componente
     } catch (error) {

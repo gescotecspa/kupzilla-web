@@ -1,8 +1,9 @@
 import { Dispatch } from "@reduxjs/toolkit";
-import axios from "axios";
+// import axios from "axios";
 import { addBranch, cleanBranch, deleteBranch, setAllBranches, setBranch, setCommentsBranch, setCommentsBranchLastWeek, updateBranch } from "../reducers/branchReducer";
 import { Branch, BranchUpload } from "../types/types";
 import { AppDispatch } from "../store/store";
+import apiClient from "../../api/axiosConfig";
 
 const URL = import.meta.env.VITE_API_URL;
 
@@ -10,7 +11,8 @@ const URL = import.meta.env.VITE_API_URL;
 const fetchAllBranches = () => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await axios.get(`${URL}/branches`);
+      // const response = await axios.get(`${URL}/branches`);
+      const response = await apiClient.get("/branches");
       dispatch(setAllBranches(response.data));
     } catch (error) {
       console.error("Error al obtener las sucursales:", error);
@@ -22,7 +24,8 @@ const fetchAllBranches = () => {
 const fetchBranchById = (branchId: number) => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await axios.get(`${URL}/branches/${branchId}`);
+      // const response = await axios.get(`${URL}/branches/${branchId}`);
+      const response = await apiClient.get(`/branches/${branchId}`);
       // console.log("data de la respuesta en sucursal",response.data);
       
       dispatch(setBranch(response.data));
@@ -36,7 +39,7 @@ const fetchBranchById = (branchId: number) => {
 const createBranch = (branchData: Branch) => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await axios.post(`${URL}/branches`, branchData);
+      const response = await apiClient.post(`${URL}/branches`, branchData);
       dispatch(addBranch(response.data));
       return response;
     } catch (error) {
@@ -49,7 +52,7 @@ const createBranch = (branchData: Branch) => {
 const updateBranchById = (branchId: number, branchData: BranchUpload) => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await axios.put(`${URL}/branches/${branchId}`, branchData);
+      const response = await apiClient.put(`${URL}/branches/${branchId}`, branchData);
       // console.log("respuesta en la actuailzacion........",response);
       
       dispatch(updateBranch(response.data));
@@ -64,7 +67,7 @@ const updateBranchById = (branchId: number, branchData: BranchUpload) => {
 const deleteBranchById = (branchId: number, branchData: any) => {
   return async (dispatch: Dispatch) => {
     try {
-        const response = await axios.put(`${URL}/branches/${branchId}`, branchData);
+        const response = await apiClient.put(`${URL}/branches/${branchId}`, branchData);
         dispatch(deleteBranch(branchId));
         return response;
     } catch (error) {
@@ -87,15 +90,10 @@ const inactivateBranch = (branchId: number, statusId: number | undefined) => {
     try {
 
       // Primero, actualizamos el estado de la sucursal
-      const branchResponse = await axios.put(`${URL}/branches/${branchId}`, {
+      const branchResponse = await apiClient.put(`${URL}/branches/${branchId}`, {
         status_id: statusId,
       })
-      // , {
-      //   headers: {
-      //     Authorization: `Bearer ${token}`,
-      //   },
-      // });
-      console.log('Sucursal marcada como inactiva:', branchResponse.data);
+      // console.log('Sucursal marcada como inactiva:', branchResponse.data);
       dispatch(updateBranch(branchResponse.data));
     } catch (error) {
       console.error('Error al actualizar el estado de la sucursal y promociones:', error);
@@ -107,7 +105,7 @@ const inactivateBranch = (branchId: number, statusId: number | undefined) => {
 const fetchBranchCommentsLastWeek = () => {
   return async (dispatch: AppDispatch) => {
     try {
-      const response = await axios.get(`${URL}/branches/ratings/last_4_weeks`);
+      const response = await apiClient.get(`${URL}/branches/ratings/last_4_weeks`);
       console.log("respuesta de peticion puntos turisticos", response);
       
       dispatch(setCommentsBranchLastWeek(response.data));
@@ -120,7 +118,7 @@ const fetchBranchCommentsLastWeek = () => {
 const fetchBranchCommentsById = (BranchId: number) => {
   return async (dispatch: AppDispatch) => {
     try {
-      const response = await axios.get(`${URL}/branches/admin/${BranchId}/ratings/all`);
+      const response = await apiClient.get(`${URL}/branches/admin/${BranchId}/ratings/all`);
       console.log("respuesta de peticion de la sucursal idd",response);
       
       dispatch(setCommentsBranch(response.data));

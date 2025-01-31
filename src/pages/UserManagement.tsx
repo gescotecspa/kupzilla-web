@@ -24,7 +24,7 @@ const UserManagement = () => {
     const dispatch = useAppDispatch();
     const countries = useAppSelector((state: RootState) => state.globalData.countries);
     const MySwal = withReactContent(Swal);
-    console.log("todos los users", users[3],users);
+    // console.log("todos los users", users[3],users);
     // console.log("todos los roles", roles);
     // console.log("todos los estados", statuses);
     //Filtros

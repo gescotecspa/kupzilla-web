@@ -11,6 +11,7 @@ import Pagination from '../components/Pagination/pagination';
 import { useMediaQuery } from 'react-responsive';
 import iconclean from '../assets/icons/clear.svg';
 import noimage from '../assets/images/noImageAvailable.png';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const URL = import.meta.env.VITE_API_URL;
 
@@ -24,8 +25,8 @@ const TouristPointsList = () => {
   const totalPages = Math.ceil(touristPoints.length / itemsPerPage);
   const [titleFilter, setTitleFilter] = useState('');
   const [ratingFilter, setRatingFilter] = useState<number | number[]>([0, 5]);
-
-  // console.log("todos los puntos turisticos",touristPoints);
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+  console.log("todos los puntos turisticos",touristPoints);
 
   React.useEffect(() => {
     dispatch(fetchAllTouristPoints());
@@ -42,6 +43,9 @@ const handleTitleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => 
     console.log(event);
     
     setRatingFilter(newValue as number[]);
+  };
+  const handleImageLoad = (id: number) => {
+    setLoadedImages((prevState) => ({ ...prevState, [id]: true }));
   };
 
   // Filtrar los puntos turísticos según el título y la valoración
@@ -106,7 +110,26 @@ const handleTitleFilterChange = (event: React.ChangeEvent<HTMLInputElement>) => 
       <div className="cards-container">
         {paginatedTouristPoints.map((point: TouristPoint) => (
           <Card className="tourist-point-card" onClick={() => navigate(`/tourist-points/${point.id}`)} key={point.id}>
-            {point.images[0]? <img src={URL + point.images[0]?.image_path} alt={point.title} className="card-image" />:<img src={noimage} alt={"sin imagen"} className="card-image" />}
+            <div className="card-image-container">
+        {/* Loader para la imagen */}
+        {!loadedImages[point.id] && (
+          <div className="image-loader-container">
+            <CircularProgress
+              sx={{
+                color: 'var(--primary-color)',
+              }}
+              thickness={4}
+            />
+          </div>
+        )}
+        {/* Imagen */}
+        <img
+          src={point.images[0] ? `${URL}${point.images[0]?.image_path}` : noimage}
+          alt={point.title}
+          className={`card-image ${loadedImages[point.id] ? 'visible' : 'hidden'}`}
+          onLoad={() => handleImageLoad(point.id)}
+        />
+      </div>
             <div className="card-content">
                 <Rating className="Rating" name="read-only" value={point.average_rating} readOnly precision={0.5} />
               <div className="nameRating">

@@ -38,7 +38,7 @@
   
     .subtitle {
       color: var(--secundary-color);
-      margin-bottom: 2%;
+      margin-bottom: 1%;
       font-size: 1.2rem;
       @media (max-width: 600px) {
         font-size: 0.8rem;
@@ -69,13 +69,13 @@
       }
     }
     .list-cont{
-        margin-left: 5%;
+        margin-left: 1%;
         display: flex;
-    flex-direction: column;
-    max-height: 50vh;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-top: 2%;
+        flex-direction: column;
+        max-height: 50vh;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 1.5%;
     @media (max-width: 600px) {
       max-height: 70vh;
     }
@@ -83,9 +83,15 @@
     .list-item {
         display: flex;
         justify-content: space-between;
-        width: 30%;
+        width: 20%;
       padding: 5px 0;
       color: var(--secundary-color);
+      cursor: pointer;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: var(--primary-color-active);
+      }
       @media (max-width: 600px) {
         width: 45%;
       }
@@ -137,10 +143,21 @@
   }
   .edit-button{
     display: flex;
-    align-items: flex-end;
-    & svg{
-       width: 20px;
-    height: 20px; 
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-weight: 600;
+    color: var(--secundary-color);
+    &svg{
+      width: 20px;
+      height: 20px; 
+    }
+    &:hover {
+      color: var(--primary-color-active);
+      &svg{
+        color: red;
+     }
     }
     
   }

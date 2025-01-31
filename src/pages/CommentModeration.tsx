@@ -335,7 +335,7 @@ useEffect(() => {
             <p>
               <strong>Estado:</strong>{" "}
               {selectedComment.status
-                ? translateStatusToSpanish(selectedComment.status.name)
+                ? translateStatusToSpanish(selectedComment.status?.name)
                 : "Sin estado"}
             </p>
             <p>
@@ -356,8 +356,8 @@ useEffect(() => {
               {new Date(selectedComment.created_at).toLocaleDateString()}
             </p>
             <div className="modal-actions-branch">
-             {selectedComment.status.name !=='approved' && <button onClick={handleApprove}>Aprobar</button>}
-             {selectedComment.status.name !=='rejected' &&<button onClick={handleReject}>Rechazar</button>}
+             {selectedComment.status?.name !=='approved' && <button onClick={handleApprove}>Aprobar</button>}
+             {selectedComment.status?.name !=='rejected' &&<button onClick={handleReject}>Rechazar</button>}
             </div>
           </div>
         </div>

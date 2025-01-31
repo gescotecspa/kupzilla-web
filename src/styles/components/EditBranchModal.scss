@@ -34,10 +34,9 @@
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    height: 65%;
+    // height: 70%;
     max-width: 90%;
     justify-content: space-between;
-
     & h2{
         font-size: 1.3rem;
         color: var(--primary-color);
@@ -107,11 +106,11 @@
     justify-content: space-evenly;
     margin-top: 10px;
     padding: 10px;
-    background-color: white;
+    // background-color: white;
     position: sticky;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    // box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
   }
 
   .image-preview{ 
@@ -166,7 +165,8 @@
     justify-content: center;
     color: var(--primary-color);
    & p {
-      width: 45%;
+      width: 47%;
+      font-size: 1rem;
       @media (max-width: 600px) {
         font-size: 0.7rem;
         margin: 5px 0;

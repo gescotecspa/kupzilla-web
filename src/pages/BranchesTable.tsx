@@ -16,7 +16,7 @@ const BranchesTable = () => {
   const dispatch = useAppDispatch();
   const branches = useAppSelector((state: any) => state.branches.allBranches);
   const [currentPage, setCurrentPage] = useState(1);
-  const branchesPerPage = isMobile? 10 : 7;
+  const branchesPerPage = isMobile? 9 : 6;
 // console.log("sucursales en tabla",branches);
 
 const indexOfLastBranch = currentPage * branchesPerPage;

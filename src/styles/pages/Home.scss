@@ -55,9 +55,9 @@
         line-height: 1.5;
       }
 
-      .button {
+      .buttonRegisterTourist {
         padding: 12px 24px;
-        background-color: var(--primarySoft-color);
+        background-color: var(--grey-color);
         color: var(--primary-color);
         border: none;
         border-radius: 6px;
@@ -69,7 +69,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
         &:hover {
-          background-color: var(--grey-color);
+          background-color: #fff;
           color: var(--primary-color);
           transform: scale(1.01);
         }
