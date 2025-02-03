@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import '../styles/pages/CommentModeration.scss';
 import { useAppDispatch, useAppSelector } from '../redux/store/hooks';
-import { fetchAllTouristPoints, fetchTouristPointCommentsById, fetchTouristPointCommentsLastWeek } from '../redux/actions/touristPointActions';
-import { cleanCommentsTouristPoint } from '../redux/reducers/touristPointsReducer';
 import { cleanCommentsBranch } from '../redux/reducers/branchReducer';
 import { cleanCommentsTourist } from '../redux/reducers/userReducer';
 import { fetchAllUsers, fetchTouristCommentsById, fetchTouristCommentsLastWeek } from '../redux/actions/userActions';
@@ -24,7 +22,6 @@ const CommentModeration = () => {
   const { commentsBranchLastWeek, commentsBranch } = useAppSelector((state: any) => state.branches);
   const { ratingsTouristLastWeek, ratingsTourist, users } = useAppSelector((state: any) => state.user);
   const branches = useAppSelector((state: RootState) => state.branches.allBranches);
-  const touristPoints = useAppSelector((state: RootState) => state.touristPoints.allTouristPoints);
   const [ placeholderInput, setPlaceholderInput ] = useState<string>('');
   const [showModal, setShowModal] = useState<boolean>(false);
   const [selectedComment, setSelectedComment] = useState<any | null>(null);
@@ -46,21 +43,16 @@ const CommentModeration = () => {
 
 useEffect(() => {
     dispatch(fetchAllUsers())
-    dispatch(fetchAllTouristPoints())
     dispatch(fetchAllBranches())
   }, []);
 
   useEffect(() => {
     // Limpiar los comentarios cuando se cambie el tipo seleccionado
-    dispatch(cleanCommentsTouristPoint());
     dispatch(cleanCommentsBranch());
     dispatch(cleanCommentsTourist());
     setShowModal(false)
     // Cargar los comentarios de acuerdo con el tipo seleccionado
-    if (commentType === 'touristPoint') {
-      dispatch(fetchTouristPointCommentsLastWeek());
-    //   setPlaceholderInput('Nombre del punto turístico')
-    } else if (commentType === 'branch') {
+    if (commentType === 'branch') {
       dispatch(fetchBranchCommentsLastWeek());
     //   setPlaceholderInput('Nombre de sucursal')
     } else if (commentType === 'tourist') {
@@ -101,13 +93,6 @@ useEffect(() => {
       console.log("id de la sucursal a enviaar a pedir", branchId, typeof(branchId));
       
       dispatch(fetchBranchCommentsById(branchId));
-    } else if (commentType === 'touristPoint') {
-      const touristPointId = parseInt(selectedValue, 10);
-      if (isNaN(touristPointId)) {
-        dispatch(fetchTouristPointCommentsLastWeek());
-        return;
-      }
-      dispatch(fetchTouristPointCommentsById(touristPointId));
     }
   };
 
@@ -227,21 +212,8 @@ useEffect(() => {
           </>
         )}
 
-        {commentType === "touristPoint" && (
-          <>
-            <select value={filterValue} onChange={handleFilterApply}>
-              <option value="last">Comentarios del último mes</option>
-              {touristPoints.map((point) => (
-                <option key={point.id} value={point.id}>
-                  {point.title}
-                </option>
-              ))}
-            </select>
-            {/* <button className="search-button" onClick={handleFilterApply}>
-            Buscar
-            </button> */}
-          </>
-        )}
+        
+        
       </div>
 
       {/* {loading && <p>Cargando comentarios...</p>}

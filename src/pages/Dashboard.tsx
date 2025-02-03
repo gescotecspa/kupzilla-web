@@ -20,7 +20,6 @@ const Dashboard = () => {
         { path: '/userProfile', label: 'Perfil de Usuario', icon: profile },
         { path: '/users-management', label: 'Gestión de Usuarios', icon: users },
         { path: '/promotions', label: 'Promociones', icon: Discount },
-        { path: '/tourist-points', label: 'Puntos Turísticos', icon: touristPoint},
         // { path: '/notifications', label: 'Notificaciones', icon: Messages },
         { path: '/reports', label: 'Reportes', icon: Analytics },
         { path: '/branches', label: 'Sucursales', icon: branchesIcon },

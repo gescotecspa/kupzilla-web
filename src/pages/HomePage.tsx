@@ -33,13 +33,13 @@ const HomePage = () => {
     <div className="home-container">
       <div className="content-container">
         <div className="registration-section">
-          <h3>¡Bienvenido a Cobquecura!</h3>
+          <h3>¡Bienvenido a Kupzilla!</h3>
           <p>
-            Si eres turista, <strong>¡regístrate aquí!</strong> para comenzar a aprovechar nuestras promociones y
-            disfrutar de todas las maravillas que nuestra comuna tiene para ofrecer.
+            Si eres turista, <strong>¡regístrate aquí!</strong> para comenzar a aprovechar nuestros cupones de descuentos y
+            disfrutar de todas las maravillas que nuestra App tiene para ofrecer.
           </p>
           <button className="buttonRegisterTourist" onClick={handleTouristRegistration}>
-            Registrarse como Turista
+            Registrarse
           </button>
         </div>
         <div className="video-section">
@@ -53,10 +53,15 @@ const HomePage = () => {
       <section>
         <h2>Nuestra Misión</h2>
         <p>
-          Somos la Cámara de Comercio, Turismo y Desarrollo de Cobquecura, dedicados a promover y fomentar un turismo
-          familiar, seguro, sostenible y responsable en nuestra hermosa comuna. Preservamos y realzamos el paisaje
-          natural y cultural de la región, promoviendo la conservación del medio ambiente y respetando las tradiciones
-          locales, sin perturbar el estilo de vida campesino que caracteriza Cobquecura.
+        “Somos Kupzilla, la plataforma enfocada en brindar los mejores códigos de descuento y promociones 
+        a nuestros usuarios. Nuestra misión es conectar a personas 
+        con una amplia variedad de comercios y servicios, permitiendo a cada tienda 
+        asociada registrar su negocio y compartir ofertas exclusivas.
+        A través de Kupzilla, ayudamos a los comercios a dar a conocer sus promociones,
+        mientras que los usuarios descubren oportunidades únicas para ahorrar en sus compras.
+        Nuestro objetivo es crear una experiencia rápida, segura y práctica para todos,
+        fomentando una comunidad en la que cada cupón se transforme en un beneficio real.
+        ¡Bienvenido a Kupzilla, donde tus ahorros comienzan!”
         </p>
       </section>
       <div className='divLogoHome'>
