@@ -5,9 +5,9 @@ import '../styles/pages/Home.scss';
 import { fetchRoles, fetchStatuses } from '../redux/actions/userActions';
 import { fetchCategories, fetchCountries } from '../redux/actions/globalDataActions';
 import { useNavigate } from 'react-router-dom';
-import video from '../assets/images/Loberia.mp4';
-import logo from '../assets/logo.png';
-import logo2 from '../assets/logo2.png';
+import video from '../assets/images/zilla1.png';
+import logo from '../assets/images/logok.png';
+import logo2 from '../assets/images/KUPZILLAName.png';
 
 const HomePage = () => {
   // const { userData, accessToken } = useAppSelector((state: RootState) => state.user);

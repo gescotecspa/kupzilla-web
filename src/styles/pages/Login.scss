@@ -105,23 +105,23 @@
     
 .form-inputLogin:focus {
       outline: none;
-      border-color: var(--greenSoft-color);
+      border-color: var(--primary-light); // Reemplaza var(--greenSoft-color) con var(--primary-light)
     }
   
 .submit_button {
-      width: 250px;
-      min-width: 200px;
-      padding: 10px;
-      border: none;
-      background-color: var(--primary-color);
-      color: white;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      font-size: 13px;
+  width: 250px;
+  min-width: 200px;
+  padding: 10px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--background-light); // Reemplaza white con var(--background-light)
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
 
-     &:hover {
-      background-color: var(--greenSoft-color);
-      cursor: pointer;
+  &:hover {
+    background-color: var(--primary-light); // Reemplaza var(--greenSoft-color) con var(--primary-light)
+    cursor: pointer;
     } 
     }
 .cancel-buttonLog{

@@ -4,10 +4,10 @@ import '../styles/pages/QRCode.scss'
 
 const QRCodePage = () => {
   // const url = "https://seal-app-dx4lr.ondigitalocean.app/register";
-  const url = "https://play.google.com/store/apps/details?id=com.camaradeturismocobquecura.CobquecurApp";
+  const url = "https://play.google.com/store/apps";
   // Función para compartir el QR por WhatsApp
   const handleShareWhatsApp = () => {
-    const message = `Quieres descuentos en Cobquecura? ¡Registrarte aquí! ${url}`;
+    const message = `Quieres descuentos en Kupzilla? ¡Registrarte aquí! ${url}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     
     // Abrimos el enlace en una nueva ventana de WhatsApp

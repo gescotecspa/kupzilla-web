@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/pages/PasswordReset.scss';
 import { resetPassword } from '../redux/actions/userActions';
 import { useAppDispatch } from '../redux/store/hooks';
-import logo3 from "../assets/logoCCTDC.png";
+import logo3 from "../assets/images/splash-icon2.png";
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
