@@ -6,7 +6,7 @@ import { UserState } from '../../redux/reducers/userReducer';
 import { useAppDispatch, useAppSelector } from '../../redux/store/hooks';
 import { logOutUser, userLogIn } from '../../redux/actions/userActions';
 import User from '../../models/User';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/images/logok.png'
 // import logo2 from '../../assets/logo2.png'
 import noimage from '../../assets/images/noimage.png';
 
@@ -61,11 +61,11 @@ const Navbar: React.FC = () => {
         <nav className="navbar">
             <div className='divLogo'>
                 <Link to="/">
-                    <img src={logo} alt="Logo" />
+                    <img src={logo} alt="Logok" />
                     <div className='textCCTDC'>
-                        <p className="customText">CÁMARA DE COMERCIO,</p>
-                        <p className="customText">TURISMO Y DESARROLLO</p>
-                        <p className="customText">COBQUECURA</p>
+                        <p className="customText"></p>
+                        <p className="customText">KUPZILLA</p>
+                        <p className="customText"></p>
                     </div>                    
                     {/* <img src={logo2} alt="Logo2" /> */}
                 </Link>

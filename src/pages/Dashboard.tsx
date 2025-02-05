@@ -6,7 +6,7 @@ import Discount from "../assets/icons/Discount.svg";
 import Analytics from "../assets/icons/Analytics.svg";
 import profile from "../assets/icons/profile.svg";
 // import faq from "../assets/icons/faq.svg"
-import touristPoint from "../assets/icons/touristPoint.svg";
+//import touristPoint from "../assets/icons/touristPoint.svg";
 import users from "../assets/icons/users.svg";
 // import Messages from "../assets/icons/Messages.svg";
 import branchesIcon from "../assets/icons/store.svg";
@@ -20,7 +20,6 @@ const Dashboard = () => {
         { path: '/userProfile', label: 'Perfil de Usuario', icon: profile },
         { path: '/users-management', label: 'Gestión de Usuarios', icon: users },
         { path: '/promotions', label: 'Promociones', icon: Discount },
-        { path: '/tourist-points', label: 'Puntos Turísticos', icon: touristPoint},
         // { path: '/notifications', label: 'Notificaciones', icon: Messages },
         { path: '/reports', label: 'Reportes', icon: Analytics },
         { path: '/branches', label: 'Sucursales', icon: branchesIcon },

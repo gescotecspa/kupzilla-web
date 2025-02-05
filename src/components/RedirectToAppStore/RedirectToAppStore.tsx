@@ -6,8 +6,8 @@ const RedirectToAppStore = () => {
     const userAgent = navigator.userAgent || navigator.vendor;
 
     // Enlace para Google Play y App Store
-    const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.camaradeturismocobquecura.CobquecurApp';
-    const appStoreUrl = 'https://apps.apple.com/app/colocarAppleIdCorrespondiente';
+    const playStoreUrl = 'https://play.google.com/store/apps';
+    const appStoreUrl = 'https://www.apple.com/la/app-store/';
 
     // Detecta si es un dispositivo Android o iOS
     const isAndroid = /android/i.test(userAgent);
@@ -21,7 +21,7 @@ const RedirectToAppStore = () => {
       window.location.href = appStoreUrl;
     } else {
       // Si no es Android ni iOS, redirigir a una URL genérica (opcional)
-      window.location.href = 'https://www.cobquecurapp.cl';
+      window.location.href = 'https://kupzilla.duckdns.org';
     }
 
     // Agregar un tiempo de espera para permitir que la app se abra (fallback en caso de no abrirse)

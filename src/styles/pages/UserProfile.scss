@@ -139,17 +139,17 @@
 
       .save-button {
         background-color: var(--primary-color);
-        color: #fff;
+        color: var(--background-light); // Reemplaza #fff con var(--background-light)
         &:hover{
-          background-color: var(--greenSoft-color);
+          background-color: var(--primary-light); // Reemplaza var(--greenSoft-color) con var(--primary-light)
         }
       }
 
       .cancel-button {
-        background-color: #a6332a;
-        color: #fff;
+        background-color: var(--orange-color);
+        color: var(--background-light);
         &:hover{
-          background-color: #d03328;
+          background-color: var(--orange-light-color);
         }
       }
       @media (max-width: 568px) {

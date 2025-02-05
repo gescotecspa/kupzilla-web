@@ -16,8 +16,8 @@ const Footer = () => {
                 <div className="footer-section2">
                     <h3>©2024 - Todos los derechos reservados
                     </h3>
-                    <p>Cámara de Comercio, Turismo y Desarrollo de Cobquecura, A.G. (CCTD Cobquecura)</p>
-                    <p>Teléfono:  / Correo electrónico: </p>
+                    <p>Kupzilla</p>
+                    <p>--------</p>
 
                 </div>
                 <div className="footer-section3">

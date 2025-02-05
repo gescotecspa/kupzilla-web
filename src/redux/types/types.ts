@@ -46,27 +46,6 @@ export enum UserActionTypes {
     image_data?: string | null;
   }
 
-  export interface TouristPointComment {
-    id: number;
-    tourist_point_id:number;
-    tourist_id:number;
-    tourist_first_name: string;
-    tourist_image_url: string;
-    rating: number;
-    comment: string;
-    created_at: string;
-    deleted_at: string | null;
-    status: {
-      id:number;
-      name: string;
-    };
-  }
-
-  export interface TouristPointCommentId {
-    ratings: TouristPointComment | [];
-    average_rating: number
-  }
-
   export interface BranchComment {
     id: number;
     branch_id:number;

@@ -124,33 +124,7 @@ export const routes: RouteProps[] = [
             allowedRoles: ['admin']
         }
     },
-    {
-        path: "/tourist-points",
-        element: lazy(async () => await import("../pages/TouristPointsList")),
-        name: "TouristPoints",
-        layout: lazy(async () => await import("../pages/Layout/layout")),
-        authorization: {
-            allowedRoles: ['admin']
-        }
-    },
-    {
-        path: "/tourist-points/:id",
-        element: lazy(async () => await import("../pages/TouristPointDetail")),
-        name: "TouristPoints",
-        layout: lazy(async () => await import("../pages/Layout/layout")),
-        authorization: {
-            allowedRoles: ['admin']
-        }
-    },
-    {
-        path: "/create-tourist-point",
-        element: lazy(async () => await import("../components/FormTouristPoint/CreateTouristPoint ")),
-        name: "CreateTouristPoints",
-        layout: lazy(async () => await import("../pages/Layout/layout")),
-        authorization: {
-            allowedRoles: ['admin']
-        }
-    },
+    
     {
         path: "/notifications",
         element: lazy(async () => await import("../pages/UnderConstruction")),
