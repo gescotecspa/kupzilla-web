@@ -1,3 +1,5 @@
+@import '../abstracts/_variables';
+
 .home-container {
   width: 100%;
   display: flex;
@@ -5,11 +7,12 @@
   min-height: 100vh;
   align-items: center;
   padding: 20px;
-  background-color: var(--grey-color);
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+  background-color: var(--background-light); // Reemplaza var(--grey-color) con var(--background-light)
+  font-family: var(--font-robotoFlex); // Usa la variable de fuente definida
+  color: var(--black-color); // Reemplaza #333 con var(--black-color)
   background-image: url(../../assets/images/fondo-poli.svg);
   padding-top: 10%;
+
   @media (max-width: 500px) {
     padding: 0;
     height: 100%;

@@ -7,7 +7,7 @@ import Discount from "../../assets/icons/Discount.svg"
 import Analytics from "../../assets/icons/Analytics.svg"
 import profile from "../../assets/icons/profile.svg"
 import faq from "../../assets/icons/faq.svg"
-import touristPoint from "../../assets/icons/touristPoint.svg"
+//import touristPoint from "../../assets/icons/touristPoint.svg"
 import users from "../../assets/icons/users.svg"
 // import Messages from "../../assets/icons/Messages.svg"
 import { useAppDispatch, useAppSelector } from '../../redux/store/hooks';
@@ -154,7 +154,7 @@ const Sidebar: React.FC = () => {
                     {route.style == "userProfile" ? <img src={profile} className='iconos' /> : null}
                     {route.style == "configuration" ? <img src={config} className='iconos' /> : null}
                     {route.style == "faqicono" ? <img src={faq} className='iconos' /> : null}
-                    {route.style == "puntosturisticos" ? <img src={touristPoint} className='iconos' /> : null}
+                    {/*route.style == "puntosturisticos" ? <img src={touristPoint} className='iconos' /> : null*/}
                     <span className={`sidebar-text ${isSidebarOpen ? 'open' : ''}`}>{route.name}</span>
                   </Link> :
                   <div className='divSalir'> {route.style == "salir" ? <img src={logoutIcon} className='iconos' /> : null}
