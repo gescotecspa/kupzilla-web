@@ -23,7 +23,9 @@ const RegisterPartnerModal: React.FC<RegisterPartnerModalProps> = ({ isOpen, onC
   const categories = useAppSelector((state: RootState) => state.globalData.categories);
   const roles = useAppSelector((state: RootState) => state?.user.roles);
   const [loading, setLoading] = useState(false);
-  
+  const statusActive = useAppSelector(
+    (state: RootState) => state.user.statuses
+  ).find((s) => s.name === "active");
   
 // console.log("categorias",categories);
 
@@ -40,7 +42,7 @@ const RegisterPartnerModal: React.FC<RegisterPartnerModalProps> = ({ isOpen, onC
     last_name: '',
     country: 'Chile',
     email: '',
-    status_id: 1,
+    status_id: statusActive? statusActive?.id : 1,
     city: '',
     birth_date: '',
     phone_number: '',
@@ -108,7 +110,7 @@ const RegisterPartnerModal: React.FC<RegisterPartnerModalProps> = ({ isOpen, onC
     try {
       const { address, contact_info, business_type, category_ids,confirmPassword, ...userForm } = formData;
       // console.log("formData en la creacion ",formData);
-
+      
       const createdUserAction = await dispatch(createPartnerUser(userForm));
       // console.log("created user en payload",createdUserAction);
       
