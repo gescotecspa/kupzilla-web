@@ -58,11 +58,7 @@ const Sidebar: React.FC = () => {
           name: "Usuarios",
           style: "usuarios"
         },
-        {
-          path: "/tourist-points",
-          name: "Puntos turísticos",
-          style: "puntosturisticos"
-        },
+      
         // {
         //   path: "/notifications",
         //   name: "Notificaciones",
