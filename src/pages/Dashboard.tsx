@@ -6,7 +6,6 @@ import Discount from "../assets/icons/Discount.svg";
 import Analytics from "../assets/icons/Analytics.svg";
 import profile from "../assets/icons/profile.svg";
 // import faq from "../assets/icons/faq.svg"
-//import touristPoint from "../assets/icons/touristPoint.svg";
 import users from "../assets/icons/users.svg";
 // import Messages from "../assets/icons/Messages.svg";
 import branchesIcon from "../assets/icons/store.svg";
