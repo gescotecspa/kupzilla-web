@@ -12,7 +12,7 @@ const fetchAllBranches = () => {
   return async (dispatch: Dispatch) => {
     try {
       // const response = await axios.get(`${URL}/branches`);
-      const response = await apiClient.get("/branches");
+      const response = await apiClient.get("/branches_admin");
       dispatch(setAllBranches(response.data));
     } catch (error) {
       console.error("Error al obtener las sucursales:", error);
