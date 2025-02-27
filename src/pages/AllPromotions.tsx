@@ -82,7 +82,7 @@ const AllPromotions = () => {
         return true;
     };
     useEffect(() => {
-        dispatch(fetchAllPromotions("descuento"));
+        dispatch(fetchAllPromotions());
         dispatch(fetchStatuses());
         dispatch(fetchCategories())
         // if(userData){
