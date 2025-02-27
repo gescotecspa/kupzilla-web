@@ -100,7 +100,7 @@ const PasswordReset= () => {
                     required
                 />
                 {error && <div className="error">{error}</div>}
-                <button type="submit">Change contraseña</button>
+                <button type="submit">Change Password</button>
             </form>
             </div>
         </div>
