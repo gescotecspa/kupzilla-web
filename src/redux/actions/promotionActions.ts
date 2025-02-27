@@ -12,17 +12,25 @@ import apiClient from "../../api/axiosConfig";
 
 const URL = import.meta.env.VITE_API_URL;
 
+
+
+
 // Obtener todas las promociones
-const fetchAllPromotions = () => {
+const fetchAllPromotions = (keyword: string = "descuento") => {
   return async (dispatch: Dispatch) => {
     try {
-      const response = await apiClient.get(`${URL}/v2/promotions`);
+      const response = await apiClient.get(`${URL}/promotions`, {
+        params: { keyword }, // Enviamos el filtro como parámetro en la URL
+      });
+      console.log("🔍 Promociones obtenidas de la API:", response.data);
       dispatch(setAllPromotions(response.data));
     } catch (error) {
-      console.error("Error al obtener todas las promociones:", error);
+      console.error("X Error al obtener todas las promociones:", error);
     }
   };
 };
+
+
 
 // Obtener promociones de un branch específico
 const fetchBranchPromotions = (branchId: number) => {
