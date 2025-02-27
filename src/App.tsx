@@ -19,7 +19,7 @@ const App = () => {
         {renderRoutes(routes)}
       </Routes>
       {/* Botón para probar el backend */}
-      <button onClick={handleTest}>Probar Backend</button>
+      <button onClick={handleTest}></button>
     </BrowserRouter>
   );
 };

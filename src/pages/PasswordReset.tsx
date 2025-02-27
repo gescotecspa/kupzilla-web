@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/pages/PasswordReset.scss';
 import { resetPassword } from '../redux/actions/userActions';
 import { useAppDispatch } from '../redux/store/hooks';
-import logo3 from "../assets/images/splash-icon2.png";
+import logo3 from "../assets/images/kup.png";
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
@@ -46,7 +46,7 @@ const PasswordReset= () => {
                 setPassword('');
                 Toast.fire({
                     icon: "success",
-                    title: `Tu contraseña fue restablecida correctamente`,
+                    title: `Your password was successfully reset`,
                   })
                   navigate('/open_app_instruction');
             })
@@ -75,7 +75,7 @@ const PasswordReset= () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                 />
-                <label htmlFor="code">Código:</label>
+                <label htmlFor="code">Code:</label>
                 <input
                     type="text"
                     id="code"
@@ -83,7 +83,7 @@ const PasswordReset= () => {
                     onChange={(e) => setCode(e.target.value)}
                     required
                 />
-                <label htmlFor="password">Nueva contraseña:</label>
+                <label htmlFor="password">New password:</label>
                 <input
                     type="password"
                     id="password"
@@ -91,7 +91,7 @@ const PasswordReset= () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <label htmlFor="confirm_password">Confirmar contraseña:</label>
+                <label htmlFor="confirm_password">Confirm Password:</label>
                 <input
                     type="password"
                     id="confirm_password"
@@ -100,7 +100,7 @@ const PasswordReset= () => {
                     required
                 />
                 {error && <div className="error">{error}</div>}
-                <button type="submit">Cambiar contraseña</button>
+                <button type="submit">Change contraseña</button>
             </form>
             </div>
         </div>
