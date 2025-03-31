@@ -1,6 +1,6 @@
 // import { Link } from 'react-router-dom';
 import '../styles/pages/OpenAppMessage.scss';
-import logo from '../assets/images/logok.png'
+import logo from '../assets/images/logo.png'
 import logo2 from '../assets/images/KUPZILLAName.png'
 
 const OpenAppMessage = () => {

@@ -52,7 +52,7 @@
         font-weight: 700;
       }
 
-      p {
+      .registersect {
         margin-bottom: 20px;
         font-size: 1.1rem;
         line-height: 1.5;
@@ -172,7 +172,8 @@
   align-items: center;
   
   & .LogoH{
-    height: 50px;
+    height: 100px;
+    width:auto;
     margin-bottom: 10px;
     @media (max-width: 500px) {
       width:45px;
@@ -195,4 +196,30 @@
     height:100px;
   }
 
+}
+.delete-account-section {
+  margin-top: 20px;
+  text-align: center;
+
+  .baja {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #e6e6e6;
+  }
+
+  .delete-account-link {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: rgb(164, 6, 6);
+      // text-decoration: underline;
+    }
+  }
+}
+.LogoG{
+  width: 50%;
+  height: 50%;
 }

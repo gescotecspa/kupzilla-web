@@ -3,8 +3,8 @@ import "../styles/pages/Register.scss";
 import { FieldError, useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
-import logo from "../assets/images/logok.png";
-import logo2 from "../assets/images/KUPZILLAName.png";
+import logo from "../assets/images/logo.png";
+// import logo2 from "../assets/images/KUPZILLAName.png";
 import { useAppDispatch, useAppSelector } from "../redux/store/hooks";
 import { RootState } from "../redux/store/store";
 import Loader from "../components/Loader/Loader";
@@ -238,7 +238,7 @@ const Register = () => {
           <div className="divLogoReg">
             <Link className="divLogoReg2" to="/">
               <img className="logoregister" src={logo} alt="logoregister" />
-              <img className="logo2register" src={logo2} alt="logo2register" />
+              {/* <img className="logo2register" src={logo2} alt="logo2register" /> */}
             </Link>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="form" noValidate>

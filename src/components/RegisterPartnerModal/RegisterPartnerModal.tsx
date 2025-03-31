@@ -40,7 +40,7 @@ const RegisterPartnerModal: React.FC<RegisterPartnerModalProps> = ({ isOpen, onC
     confirmPassword: '',
     first_name: '',
     last_name: '',
-    country: 'Chile',
+    country: '',
     email: '',
     status_id: statusActive? statusActive?.id : 1,
     city: '',
