@@ -60,6 +60,13 @@ export const routes: RouteProps[] = [
         layout: lazy(async () => await import("../pages/Layout/layout"))
     },
     {
+        path: "/delete-account",
+        element: lazy(async () => await import("../pages/DeleteAccount")),
+        name: "QR",
+        // layout: lazy(async () => await import("../pages/Layout/layout"))
+    },
+    
+    {
         path: "/PromotionDetail/:id",
         element: lazy(async () => await import("../components/RedirectToAppStore/RedirectToAppStore")),
         name: "Redirect",

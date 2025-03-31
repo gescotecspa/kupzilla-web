@@ -292,5 +292,18 @@ const fetchTouristCommentsById = (TouristId: number) => {
   };
 };
 
+const deleteAccount = ({ email, password }: { email: string; password: string }) => {
+  return async () => {
+    try {
+      console.log(email, password);
+      
+      const response = await axios.patch(`${URL}/delete-account`, { email, password });
+      return response;
+    } catch (error) {
+      console.error("Error al eliminar la cuenta:", error);
+      throw error;
+    }
+  };
+};
 
-export { userLogIn, logOutUser,resetPassword,fetchAllUsers, fetchRoles, fetchStatuses, updateUser, assignRoleToUser, createUser, createPartnerUser,fetchTouristCommentsLastWeek, fetchTouristCommentsById };
+export { userLogIn, logOutUser,resetPassword,fetchAllUsers, fetchRoles, fetchStatuses, updateUser, assignRoleToUser, createUser, createPartnerUser,fetchTouristCommentsLastWeek, fetchTouristCommentsById, deleteAccount };
