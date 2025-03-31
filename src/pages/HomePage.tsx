@@ -62,7 +62,6 @@ const HomePage = () => {
       </section>
       <div className='divLogoHome'>
                     <img src={logo} className='LogoH' alt="LogoH" />
-                    {/* <img src={logo2} className='Logo2H' alt="Logo2H" /> */}
             </div>
     </div>
   );
