@@ -67,10 +67,6 @@ const TermsPage = () => {
   
         <hr />
         <p>
-          Esta política de privacidad fue generada por 
-          <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener noreferrer">
-            App Privacy Policy Generator
-          </a>.
         </p>
       </div>
     );
