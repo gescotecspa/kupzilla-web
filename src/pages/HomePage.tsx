@@ -4,7 +4,7 @@ import '../styles/pages/Home.scss';
 import { fetchRoles, fetchStatuses } from '../redux/actions/userActions';
 import { fetchCategories, fetchCountries } from '../redux/actions/globalDataActions';
 import { useNavigate } from 'react-router-dom';
-import gescotec from '../assets/images/gescotec.png';
+import gescotec from '../assets/images/gescotec1.png';
 import logo from '../assets/images/logo.png';
 
 const HomePage = () => {

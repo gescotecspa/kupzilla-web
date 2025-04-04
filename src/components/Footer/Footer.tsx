@@ -1,27 +1,15 @@
-
-import '../../styles/components/_footer.scss';
+import { Link } from "react-router-dom";
+import "../../styles/components/_footer.scss";
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-content">
-                <div className="footer-section1">
-                    {/* <h3>Políticas y Términos</h3>
-                <ul>
-                    <li><a href="/politica-de-privacidad">Política de Privacidad</a></li>
-                    <li><a href="/terminos-y-condiciones">Términos y Condiciones</a></li>
-                    <li><a href="/politica-de-cookies">Política de Cookies</a></li>
-                </ul> */}
-                </div>
-                <div className="footer-section2">
-                    <h3>©2024 - Todos los derechos reservados
-                    </h3>
-                    <p>Kupzilla</p>
-                    <p>--------</p>
-
-                </div>
-                <div className="footer-section3">
-                    <p></p>
+                <div className="footer-section">
+                    <p>©2024 - Todos los derechos reservados | <span className="brand">Kupzilla</span></p>
+                    <Link to="/terms" className="footer-link">
+                        Términos y Condiciones
+                    </Link>
                 </div>
             </div>
         </footer>
