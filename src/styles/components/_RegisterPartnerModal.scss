@@ -68,18 +68,13 @@
         font-weight: bold;
       }
 
-      // Contenedor para las dos columnas
       .form-columns {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        // Cada columna
         .column {
           flex: 1;
           min-width: calc(50% - 15px);
-          // @media (max-width: 768px) {
-          //   width: 95%;
-          // }
         }
         input,
         select {
@@ -183,7 +178,6 @@
   }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
   .modal-content {
     max-width: 100%;

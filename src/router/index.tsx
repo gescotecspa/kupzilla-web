@@ -54,6 +54,12 @@ export const routes: RouteProps[] = [
         layout: lazy(async () => await import("../pages/Layout/layout"))
     },
     {
+        path: "/cpanel",
+        element: lazy(async () => await import("../pages/HomePage")),
+        name: "Home",
+        layout: lazy(async () => await import("../pages/Layout/layout"))
+    },
+    {
         path: "/qr-code",
         element: lazy(async () => await import("../pages/QRCodePage")),
         name: "QR",
