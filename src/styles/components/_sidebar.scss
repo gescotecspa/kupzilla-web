@@ -1,5 +1,4 @@
 .sidebar-list{
-  // min-height: 100vh;
     flex-direction: column;
     z-index: 1;
     width: 70px;
@@ -41,7 +40,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    // min-height: 100vh;
   }
   &:hover {
       width: 200px;
@@ -150,7 +148,6 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 10px;
-    // margin-bottom: 20px;
     align-items: center;
     width: 150px;
     opacity: 0;
@@ -160,7 +157,6 @@
     &.open {
       width: 200px;
       display: flex;
-      // Inicialmente transparente
       
         opacity: 1;
         transition: opacity 0.5s ease;

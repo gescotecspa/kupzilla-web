@@ -1,10 +1,8 @@
 .navbar {
-    // background: linear-gradient(45deg, var(--primary-color), var(--primarySoft-color));
     background-color: var(--primary-color);
     width: 100%;
     display: flex;
     box-shadow: 2px 1px 1px 0px var(--primary-color);
-    // flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
     align-items: center;position: absolute;
@@ -84,7 +82,6 @@
     align-items: center;
     justify-content: end;
     li{
-      // margin-left: 30px;
       padding-right: 10px;
       margin-right: 100px;
       @media (max-width: 500px) {
@@ -113,14 +110,13 @@
   }
   .route{
     color:  var(--grey-color);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     &:hover {
       color: var(--primarySoft-color);
-      // text-shadow: 0.5px 0.5px 0.5px var(--greenSoft-color);
       cursor: pointer;
   }
   @media (max-width: 500px) {
@@ -132,8 +128,6 @@
     font-size: 1.2rem;
     &:hover {
       color: var(--primarySoft-color);
-      // text-shadow: 0.5px 0.5px 0.5px var(--grey-color);
-      // font-weight: bold;
       cursor: pointer;
   }
   @media (max-width: 500px) {
@@ -151,7 +145,6 @@
     color: #ffff;
     border-radius: 50px;
     height: 60px;
-    // width: 60px;
     @media (max-width: 500px) {
       margin-left: 5px;
       height: 40px;
@@ -165,9 +158,6 @@
       text-shadow: 0.5px 0.5px 1px var(--secundary-color);
       cursor: pointer;
     }
-    // width: 18px;
-    // height: 18px;
-    // background-size: cover;
   }
   
   

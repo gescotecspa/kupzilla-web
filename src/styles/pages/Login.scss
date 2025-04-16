@@ -36,7 +36,6 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  background-color: #fff;
     }
 .logoCapitan{
   display: flex;
@@ -52,7 +51,7 @@
       justify-content: center;
       // margin-bottom: 5%;
       & img{
-        width: 50%;
+        width: 60%;
       }
     }
 
@@ -64,29 +63,6 @@
       align-items: center;
     }
   
-    // .google-button {
-    //   width: 250px;
-    //   height: 50px;
-    //   min-width: 200px;
-    //   padding: 10px;
-    //   border: 2px solid #2c3e50;
-    //   border-radius: 5px;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   transition: all 0.3s ease;
-    //   color: #34495e;
-      
-    // }
-    // .google-button:hover {
-    //   // background-color: var(--bg-color);
-    //   border-color: var(--bg-color);
-    //   color: var(--bg-color);
-    //   cursor: ""pointer;
-    // }
-    // .google-img{
-    //   height: 40px;
-    // }
 .form {
       width: 100%;
       display: flex;

@@ -44,7 +44,6 @@ $error-font-size: 1.5rem;
   font-size: $error-font-size;
 }
 
-// Botón de volver atrás
 .back-button {
   position: absolute;
   top: 10px;
@@ -63,7 +62,7 @@ $error-font-size: 1.5rem;
   }
 }
 
-// InfoWindow de Google Maps
+
 .google-maps-info-window {
   padding: 10px;
   background-color: white;
@@ -73,7 +72,6 @@ $error-font-size: 1.5rem;
   color: $text-color;
 }
 
-// Marcadores personalizados
 .custom-marker {
   width: 30px;
   height: 30px;

@@ -5,12 +5,10 @@ import Cookies from "js-cookie";
 import Swal from "sweetalert2";
 import { useAppDispatch } from "../redux/store/hooks";
 import { userLogIn } from "../redux/actions/userActions";
-import logo from "../assets/images/logo.png";
-// import logo2 from "../assets/images/KUPZILLAName.png";
+import logo from "../assets/images/kup.png";
 import { useState } from "react";
 import Loader from "../components/Loader/Loader";
 import User from "../models/User";
-// import fondo from '../assets/images/fondoondas.svg'
 
 const Login = () => {
   const {

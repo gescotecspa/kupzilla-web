@@ -34,7 +34,6 @@
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    // height: 70%;
     max-width: 90%;
     justify-content: space-between;
     & h2{
@@ -75,7 +74,6 @@
     outline: none;
   }
   .modal-inputs {
-    // flex: 1;
     width: 47%;
     & textarea {
        height: 30%; 
@@ -94,10 +92,8 @@
     width: 48%;
     height: 100%;
     border-radius: 8px;
-    // overflow: hidden;
     @media (max-width: 600px) {
         margin-top: 50px;
-        // height: 350px;
         width: 100%;
       }   
   }
@@ -106,11 +102,9 @@
     justify-content: space-evenly;
     margin-top: 10px;
     padding: 10px;
-    // background-color: white;
     position: sticky;
     bottom: 0;
     width: 100%;
-    // box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
   }
 
   .image-preview{ 
@@ -146,7 +140,6 @@
 .uploadImage{
     background-color: #f3f3f391;
     position: absolute;
-    // max-width: 100px;
     width: 50px;
     // top: 50;
     display: none;
