@@ -11,6 +11,14 @@ import kupzillaImage01 from '../assets/images/02_Kupzilla.jpeg';
 import kupzillaImage03 from '../assets/images/03_Kupzilla.jpeg';
 import kupzillaImage02 from '../assets/images/04_Kupzilla.jpeg';
 
+import santi from '../assets/images/team/Santi.jpeg';
+import seba from '../assets/images/team/seba.jpeg';
+import juan from '../assets/images/team/juan.png';
+import francisco from '../assets/images/team/francisco.png';
+import javier from '../assets/images/team/javier.jpeg';
+import pablo from '../assets/images/team/pablo.jpeg';
+import marcos from '../assets/images/team/marcos.png';
+
 const HomePage = () => {
   const dispatch = useAppDispatch();
   
@@ -156,22 +164,42 @@ As a lean startup, we move fast, stay close to our users, and build with purpose
           <div className="team-card">
             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member" />
             <h4>Malin Svensson</h4>
-            <p>Marketing Lead</p>
+            <p>CEO</p>
           </div>
           <div className="team-card">
-            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Team Member" />
+            <img src={juan} alt="Team Member" />
             <h4>Juan Dodera</h4>
-            <p>Lead Developer</p>
+            <p>CCO</p>
           </div>
           <div className="team-card">
-            <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Team Member" />
+            <img src={francisco} alt="Team Member" />
             <h4>Francisco Gustafsson</h4>
             <p>Community Manager</p>
           </div>
           <div className="team-card">
-            <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Team Member" />
-            <h4>Oscar Nilsson</h4>
-            <p>Product Designer</p>
+            <img src={seba} alt="Team Member" />
+            <h4>Sebastian Alvarez</h4>
+            <p>Customer Engagement</p>
+          </div>
+          <div className="team-card">
+            <img src={pablo} alt="Team Member" />
+            <h4>Pablo Charras</h4>
+            <p>CTO</p>
+          </div>
+          <div className="team-card">
+            <img src={marcos} alt="Team Member" />
+            <h4>Marcos Celiz</h4>
+            <p>Product Delivery Lead</p>
+          </div>
+          <div className="team-card">
+            <img src={javier} alt="Team Member" />
+            <h4>Javier Pedernera</h4>
+            <p>Software Developer</p>
+          </div>
+          <div className="team-card">
+            <img src={santi} alt="Team Member" />
+            <h4>Santiago Celiz</h4>
+            <p>Software Developer</p>
           </div>
         </div>
       </section>
