@@ -1,24 +1,23 @@
 .navbar {
-    background-color: var(--primary-color);
-    width: 100%;
-    display: flex;
-    box-shadow: 2px 1px 1px 0px var(--primary-color);
-    flex-direction: row;
-    align-content: center;
-    align-items: center;position: absolute;
-    top: 0;
-    z-index: 10;
-    justify-content: space-between;
-    background-color: (--primary-color);
-    @media (max-width: 500px) {
-      padding-top: 0;
-        height: 80px;
-        flex-direction: row;
-        align-items: flex-end;
-        padding: 15px;
-        background-color: var(--primary-color);
-    }
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  box-shadow: 2px 1px 1px 0px var(--primary-color);
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  position: fixed; // Cambié absolute por fixed
+  top: 0;
+  z-index: 10;
+  justify-content: space-between;
+
+  @media (max-width: 500px) {
+      height: 80px;
+      flex-direction: row;
+      align-items: flex-end;
+      padding: 15px;
   }
+}
   .customText {
     font-family: var(--font-buckwheat);
     font-size: 0.8rem;

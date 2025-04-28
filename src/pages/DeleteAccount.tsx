@@ -5,7 +5,7 @@ import '../styles/pages/DeleteAccount.scss';
 import withReactContent from 'sweetalert2-react-content';
 import Swal from 'sweetalert2';
 import { deleteAccount } from '../redux/actions/userActions';
-import Logo from '../assets/images/kup.png'; // Asegúrate de tener un logo en esta ruta
+import Logo from '../assets/images/kup.png'; // Make sure you have a logo in this path
 
 const DeleteAccount = () => {
   const [email, setEmail] = useState('');
@@ -16,28 +16,28 @@ const DeleteAccount = () => {
 
   const handleDeleteAccount = () => {
     MySwal.fire({
-      title: '¿Estás seguro?',
-      text: 'Este cambio es irreversible',
+      title: 'Are you sure?',
+      text: 'This action is irreversible',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Eliminar',
-      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Delete',
+      cancelButtonText: 'Cancel',
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(deleteAccount({ email, password }))
           .then((response: any) => {
-            console.log("response",response);
+            console.log("response", response);
             
             if (response.status == 200) {
-              MySwal.fire('Cuenta Eliminada', 'Tu cuenta ha sido eliminada correctamente', 'success');
+              MySwal.fire('Account Deleted', 'Your account has been successfully deleted', 'success');
               navigate('/');
             } else {
-              throw new Error('No se pudo eliminar la cuenta');
+              throw new Error('Could not delete the account');
             }
           })
           .catch((error: any) => {
-            console.error('Error al eliminar la cuenta:', error);
-            MySwal.fire('Error', 'No se pudo eliminar la cuenta. Verifica tus credenciales.', 'error');
+            console.error('Error deleting account:', error);
+            MySwal.fire('Error', 'Could not delete the account. Please check your credentials.', 'error');
           });
       }
     });
@@ -46,22 +46,22 @@ const DeleteAccount = () => {
   return (
     <div className="delete-account-container">
       <img src={Logo} alt="Logo" className="logo" />
-      <h2>Eliminar Cuenta</h2>
-      <p className='textIng'>Ingresa tu correo y contraseña para eliminar tu cuenta.</p>
+      <h2>Delete Account</h2>
+      <p className='textIng'>Enter your email and password to delete your account.</p>
       <input
         type="email"
-        placeholder="Correo"
+        placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
         type="password"
-        placeholder="Contraseña"
+        placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleDeleteAccount} className="delete-btn">
-        Eliminar cuenta
+        Delete Account
       </button>
     </div>
   );

@@ -6,10 +6,10 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-section">
-                    <p>©2024 - Todos los derechos reservados | <span className="brand">Kupzilla</span></p>
-                    <Link to="/terms" className="footer-link">
-                        Términos y Condiciones
-                    </Link>
+                <p>©2024 - All rights reserved | <span className="brand">Kupzilla</span></p>
+<Link to="/terms" className="footer-link">
+    Terms and Conditions
+</Link>
                 </div>
             </div>
         </footer>

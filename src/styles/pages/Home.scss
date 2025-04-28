@@ -1,240 +1,276 @@
-@import '../abstracts/_variables';
-
 .home-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--background-light); // Reemplaza var(--grey-color) con var(--background-light)
-  font-family: var(--font-robotoFlex); // Usa la variable de fuente definida
-  color: var(--black-color); // Reemplaza #333 con var(--black-color)
-  background-image: url(../../assets/images/fondo-poli.svg);
-  padding-top: 10%;
-
-  @media (max-width: 500px) {
-    padding: 0;
-    height: 100%;
-  }
-  .content-container {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2%;
-    .registration-section {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      background-color: var(--primary-color);
-      min-height: 100%;
-      color: white;
-      border-radius: 12px 0px 0px 12px;
-      text-align: center;
-      justify-content: space-between;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-
-      @media (max-width: 500px) {
-        border-radius: 0px 0px 10px 10px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-self: center;
-        justify-content: flex-start;
-        padding-left: 2%;
-        height: 150px;
-        
-      }
-      h3 {
-        margin-bottom: 15px;
-        font-size: 1.8rem;
-        font-weight: 700;
-        @media (max-width: 500px) {
-          font-size: 1.4rem;
-        font-weight: 700;
-        }
-      }
-
-      .registersect {
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-        line-height: 1.5;
-        @media (max-width: 500px) {
-          font-size: 0.9rem;
-        font-weight: 600;
-        }
-      }
-
-      .buttonRegisterTourist {
-        padding: 12px 24px;
-        background-color: var(--grey-color);
-        color: var(--primary-color);
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        text-align: center;
-        font-size: 1.1rem;
-        font-weight: 600;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-        &:hover {
-          background-color: #fff;
-          color: var(--primary-color);
-          transform: scale(1.01);
-        }
-        @media (max-width: 500px) {
-          padding: 8px 20px;
-          font-size: 0.9rem;
-        }
-      }
-    }
-
-    .video-section {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      video {
-        width: 100%;
-        height: 100%;
-        border-radius: 0px 12px 12px 0px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      @media (max-width: 500px) {
-       margin-left: 0%;
-       
-       width: 100%;
-       & video{
-        border-radius: 0px 0px 0px 0px;
-       }
-      }
-    }
-    @media (max-width: 500px) {
-      margin-top: 60%;
-      display: flex;
-      flex-direction: column-reverse;
-      width: 100%;
-      margin-bottom: 5%;
-    }
-  }
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 100px;
 
   section {
-    width: 90%;
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: var(--grey-color);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
 
-    h2 {
-      color: var(--secundary-color);
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-      @media (max-width: 500px) {
-        font-size: 1.5rem;
-      }
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #444;
-      margin-bottom: 20px;
-      @media (max-width: 500px) {
-        font-size: 1rem;
-        text-align: center;
-        margin-left: 6%;
-      }
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      color: #444;
-
-      li {
-        margin-bottom: 12px;
-        font-size: 1.1rem;
-      }
-    }
-    @media (max-width: 500px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 95%;
+    &:not(:last-of-type)::after {
+      content: "";
+      display: block;
+      width: 60%;
+      margin: 3rem auto 0;
+      border-bottom: 1px solid #ddd;
     }
   }
-}
-.divLogoHome{
-  display: flex;
-  flex-direction: column;
-  height: 10%;
-  width: 20%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-left: 2%;
-  align-items: flex-end;
-  align-items: center;
-  
-  & .LogoH{
-    height: 100px;
-    width:auto;
-    margin-bottom: 10px;
-    @media (max-width: 500px) {
-      width:70px;
-      height:70px;
-    }
-  }
-  & .Logo2H{
-    height: 40px;
-    margin-bottom: 20px;
-    @media (max-width: 500px) {
-      width:100px;
-      height:35px;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height:100px;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
   }
 
-}
-.delete-account-section {
-  margin-top: 20px;
-  text-align: center;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #34495e;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .google-play-badge {
+    margin-top: 1.5rem;
+    height: 60px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 
   .baja {
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: #e6e6e6;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
   }
 
   .delete-account-link {
-    color: #e6e6e6;
+    font-size: 1rem;
+    color: #e74c3c;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 
     &:hover {
-      color: rgb(164, 6, 6);
-      // text-decoration: underline;
+      color: #c0392b;
+      text-decoration: underline;
     }
   }
-}
-.LogoG{
-  width: 50%;
-  height: 50%;
-  @media (max-width: 500px) {
-    align-self: center;
-    width: 150px;
-    height:150px;
+
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .hero-text {
+        flex: 1;
+        min-width: 300px;
+        text-align: left;
+
+        p {
+          font-size: 1.1rem;
+          color: #555;
+          margin-bottom: 1.5rem;
+        }
+
+        .google-play-badge {
+          height: 60px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      .hero-image {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  /* Benefits Section */
+  .benefits-section {
+    .benefits-group {
+      margin-bottom: 3rem;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        li {
+          background: #f9f9f9;
+          padding: 2rem;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+          max-width: 250px;
+          flex: 1 1 250px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          p {
+            flex-grow: 1;
+            margin: 0 auto 1rem;
+            max-width: 200px;
+          }
+
+          .benefit-icon {
+            margin-top: 1rem;
+
+            svg {
+              font-size: 2rem;
+              color: #2c3e50;
+            }
+          }
+
+          .benefit-image {
+            margin-top: 1rem;
+
+            img {
+              max-width: 200px;
+              height: auto;
+              display: block;
+              margin: 0 auto;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Mission Section */
+  .mission-section {
+    background: #f5f7fa;
+    padding: 2rem;
+    border-radius: 12px;
+
+    .mission-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+
+      p {
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+        color: #555;
+      }
+    }
+  }
+
+  /* Team Section */
+  .team-section {
+    .team-members {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+
+      .team-card {
+        background: #f9f9f9;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        max-width: 200px;
+        flex: 1 1 200px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+          margin: 0.5rem 0 0.3rem;
+          color: #2c3e50;
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: #555;
+        }
+      }
+    }
+  }
+
+  /* Footer */
+  .footer-section {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    text-align: center;
+
+    .footer-logo {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #888;
+    }
   }
 }
