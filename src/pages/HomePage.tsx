@@ -7,7 +7,6 @@ import '../styles/pages/Home.scss';
 import { fetchRoles, fetchStatuses } from '../redux/actions/userActions';
 import { fetchCategories, fetchCountries } from '../redux/actions/globalDataActions';
 import gescotec from '../assets/images/gescotec1.png';
-import logo from '../assets/images/logo.png';
 import kupzillaImage01 from '../assets/images/02_Kupzilla.jpeg';
 import kupzillaImage03 from '../assets/images/03_Kupzilla.jpeg';
 import kupzillaImage02 from '../assets/images/04_Kupzilla.jpeg';
