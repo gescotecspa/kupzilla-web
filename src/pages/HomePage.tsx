@@ -7,6 +7,8 @@ import '../styles/pages/Home.scss';
 import { fetchRoles, fetchStatuses } from '../redux/actions/userActions';
 import { fetchCategories, fetchCountries } from '../redux/actions/globalDataActions';
 import gescotec from '../assets/images/gescotec1.png';
+
+import kupzillaImage from '../assets/images/01_kupzilla.jpeg';
 import kupzillaImage01 from '../assets/images/02_Kupzilla.jpeg';
 import kupzillaImage03 from '../assets/images/03_Kupzilla.jpeg';
 import kupzillaImage02 from '../assets/images/04_Kupzilla.jpeg';
@@ -37,7 +39,7 @@ const HomePage = () => {
         <div className="hero-content">
           <div className="hero-text">
             <p>Kupzilla is the ultimate app for local deals, connecting businesses with customers in real time. Businesses get full control to create and customize promotions instantly, while consumers enjoy unbeatable savings at their favorite spots. With an easy-to-use platform and a risk-free start, Kupzilla is redefining local promotions—one deal at a time.</p>
-            <a href="https://play.google.com/store/apps/details?id=tu.app.id" target="_blank" rel="noopener noreferrer">
+            <a href="https://play.google.com/store/apps/details?id=com.kupzilla.tourists&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
               <img 
                 src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" 
                 alt="Disponible en Google Play" 
@@ -46,7 +48,7 @@ const HomePage = () => {
             </a>
           </div>
           <div className="hero-image">
-            <img src={gescotec} alt="Mockup de Kupzilla" />
+            <img src={kupzillaImage} alt="Mockup de Kupzilla" />
           </div>
         </div>
       </section>
