@@ -169,11 +169,6 @@ As a lean startup, we move fast, stay close to our users, and build with purpose
             <p>CEO</p>
           </div>
           <div className="team-card">
-            <img src={juan} alt="Team Member" />
-            <h4>Juan Dodera</h4>
-            <p>CCO</p>
-          </div>
-          <div className="team-card">
             <img src={francisco} alt="Team Member" />
             <h4>Francisco Gustafsson</h4>
             <p>Community Manager</p>
