@@ -15,7 +15,6 @@ import kupzillaImage02 from '../assets/images/04_Kupzilla.jpeg';
 
 import santi from '../assets/images/team/Santi.jpeg';
 import seba from '../assets/images/team/seba.jpeg';
-import juan from '../assets/images/team/juan.png';
 import francisco from '../assets/images/team/francisco.png';
 import javier from '../assets/images/team/javier.jpeg';
 import pablo from '../assets/images/team/pablo.jpeg';
